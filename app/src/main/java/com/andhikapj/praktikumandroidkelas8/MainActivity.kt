@@ -27,16 +27,16 @@ class MainActivity : AppCompatActivity() {
 
 
         btAdd.setOnClickListener {
-            if (etNumber1.text.toString() == "") {
-                number1 = 0.0
+            number1 = if (etNumber1.text.toString() == "") {
+                0.0
             } else {
-                number1 = etNumber1.text.toString().toDouble()
+                etNumber1.text.toString().toDouble()
             }
 
-            if (etNumber2.text.toString() == "") {
-                number2 = 0.0
+            number2 = if (etNumber2.text.toString() == "") {
+                0.0
             } else {
-                number2 = etNumber2.text.toString().toDouble()
+                etNumber2.text.toString().toDouble()
             }
 
             val result = number1 + number2
@@ -45,16 +45,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         btSub.setOnClickListener {
-            if (etNumber1.text.toString() == "") {
-                number1 = 0.0
+            number1 = if (etNumber1.text.toString() == "") {
+                0.0
             } else {
-                number1 = etNumber1.text.toString().toDouble()
+                etNumber1.text.toString().toDouble()
             }
 
-            if (etNumber2.text.toString() == "") {
-                number2 = 0.0
+            number2 = if (etNumber2.text.toString() == "") {
+                0.0
             } else {
-                number2 = etNumber2.text.toString().toDouble()
+                etNumber2.text.toString().toDouble()
             }
 
             val result = number1 - number2
@@ -63,16 +63,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         btMul.setOnClickListener {
-            if (etNumber1.text.toString() == "") {
-                number1 = 0.0
+            number1 = if (etNumber1.text.toString() == "") {
+                0.0
             } else {
-                number1 = etNumber1.text.toString().toDouble()
+                etNumber1.text.toString().toDouble()
             }
 
-            if (etNumber2.text.toString() == "") {
-                number2 = 0.0
+            number2 = if (etNumber2.text.toString() == "") {
+                0.0
             } else {
-                number2 = etNumber2.text.toString().toDouble()
+                etNumber2.text.toString().toDouble()
             }
 
             val result = number1 * number2
@@ -81,16 +81,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         btDiv.setOnClickListener {
-            if (etNumber1.text.toString() == "") {
-                number1 = 0.0
+            number1 = if (etNumber1.text.toString() == "") {
+                0.0
             } else {
-                number1 = etNumber1.text.toString().toDouble()
+                etNumber1.text.toString().toDouble()
             }
 
-            if (etNumber2.text.toString() == "") {
-                number2 = 0.0
+            number2 = if (etNumber2.text.toString() == "") {
+                0.0
             } else {
-                number2 = etNumber2.text.toString().toDouble()
+                etNumber2.text.toString().toDouble()
             }
 
             val result = number1 / number2
