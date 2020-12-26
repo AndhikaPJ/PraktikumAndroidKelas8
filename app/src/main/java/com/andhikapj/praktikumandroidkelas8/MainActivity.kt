@@ -23,6 +23,14 @@ class MainActivity : AppCompatActivity() {
         val tvResult = findViewById<TextView>(R.id.tvResult)
 
         btAdd.setOnClickListener {
+
+            val number1 = etNumber1.text.toString().toDouble()
+            val number2 = etNumber2.text.toString().toDouble()
+
+            val result = number1 + number2
+
+            tvResult.text = result.toString()
+
             Toast.makeText(this, "Heloo Gan", Toast.LENGTH_SHORT).show()
         }
 
