@@ -35,5 +35,19 @@ class IntentActivity : AppCompatActivity() {
 
         }
 
+        btIntent2.setOnClickListener {
+            val npm = etNPM.text.toString()
+            val nama = etNama.text.toString()
+            val ipk = etIpk.text.toString().toDouble()
+            val jumlahMataKuliah = etJumlahMataKuliah.text.toString().toInt()
+
+            val mahasiswa = Mahasiswa(npm, nama, ipk, jumlahMataKuliah)
+
+            val i = Intent(this, IntentResultActivity::class.java)
+            i.putExtra("mahasiswa", mahasiswa)
+
+            startActivity(i)
+        }
+
     }
 }

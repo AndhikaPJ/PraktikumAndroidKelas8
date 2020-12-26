@@ -15,15 +15,26 @@ class IntentResultActivity : AppCompatActivity() {
         val tvjumlahMataKuliah = findViewById<TextView>(R.id.tvJumlahMataKuliah)
 
 
-        val npm = intent.getStringExtra("npm")
-        val nama = intent.getStringExtra("nama")
-        val ipk = intent.getDoubleExtra("ipk", 0.0)
-        val jumlahMataKuliah = intent.getIntExtra("jumlahMataKuliah", 0)
+        if(intent.getStringExtra("npm")!=null) {
+            val npm = intent.getStringExtra("npm")
+            val nama = intent.getStringExtra("nama")
+            val ipk = intent.getDoubleExtra("ipk", 0.0)
+            val jumlahMataKuliah = intent.getIntExtra("jumlahMataKuliah", 0)
 
-        tvNpm.text = npm
-        tvNama.text = nama
-        tvIpk.text = ipk.toString()
-        tvjumlahMataKuliah.text = jumlahMataKuliah.toString()
+            tvNpm.text = npm
+            tvNama.text = nama
+            tvIpk.text = ipk.toString()
+            tvjumlahMataKuliah.text = jumlahMataKuliah.toString()
 
+        } else {
+            val mahasiswa = intent.getParcelableExtra<Mahasiswa>("mahasiswa")
+
+            if (mahasiswa != null) {
+                tvNpm.text = mahasiswa.npm
+                tvNama.text = mahasiswa.nama
+                tvIpk.text = mahasiswa.ipk.toString()
+                tvjumlahMataKuliah.text = mahasiswa.jumlahMataKuliah.toString()
+            }
+        }
     }
 }
