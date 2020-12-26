@@ -80,6 +80,4 @@
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 
-
-
 </LinearLayout>

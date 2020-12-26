@@ -22,16 +22,80 @@ class MainActivity : AppCompatActivity() {
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
 
-        btAdd.setOnClickListener {
+        var number1 = 0.0
+        var number2 = 0.0
 
-            val number1 = etNumber1.text.toString().toDouble()
-            val number2 = etNumber2.text.toString().toDouble()
+
+        btAdd.setOnClickListener {
+            if (etNumber1.text.toString() == "") {
+                number1 = 0.0
+            } else {
+                number1 = etNumber1.text.toString().toDouble()
+            }
+
+            if (etNumber2.text.toString() == "") {
+                number2 = 0.0
+            } else {
+                number2 = etNumber2.text.toString().toDouble()
+            }
 
             val result = number1 + number2
 
             tvResult.text = result.toString()
+        }
 
-            Toast.makeText(this, "Heloo Gan", Toast.LENGTH_SHORT).show()
+        btSub.setOnClickListener {
+            if (etNumber1.text.toString() == "") {
+                number1 = 0.0
+            } else {
+                number1 = etNumber1.text.toString().toDouble()
+            }
+
+            if (etNumber2.text.toString() == "") {
+                number2 = 0.0
+            } else {
+                number2 = etNumber2.text.toString().toDouble()
+            }
+
+            val result = number1 - number2
+
+            tvResult.text = result.toString()
+        }
+
+        btMul.setOnClickListener {
+            if (etNumber1.text.toString() == "") {
+                number1 = 0.0
+            } else {
+                number1 = etNumber1.text.toString().toDouble()
+            }
+
+            if (etNumber2.text.toString() == "") {
+                number2 = 0.0
+            } else {
+                number2 = etNumber2.text.toString().toDouble()
+            }
+
+            val result = number1 * number2
+
+            tvResult.text = result.toString()
+        }
+
+        btDiv.setOnClickListener {
+            if (etNumber1.text.toString() == "") {
+                number1 = 0.0
+            } else {
+                number1 = etNumber1.text.toString().toDouble()
+            }
+
+            if (etNumber2.text.toString() == "") {
+                number2 = 0.0
+            } else {
+                number2 = etNumber2.text.toString().toDouble()
+            }
+
+            val result = number1 / number2
+
+            tvResult.text = result.toString()
         }
 
 
