@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <EditText
@@ -13,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Angka Pertama"
+        android:layout_marginBottom="8dp"
+        android:inputType="numberDecimal"
         />
 
     <EditText
@@ -20,6 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Angka Kedua"
+        android:layout_marginBottom="8dp"
+        android:inputType="numberDecimal"
         />
 
     <LinearLayout
@@ -30,6 +35,7 @@
         >
 
         <Button
+            android:id="@+id/btAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -37,6 +43,7 @@
             android:textSize="28sp" />
 
         <Button
+            android:id="@+id/btSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
@@ -45,6 +52,7 @@
             />
 
         <Button
+            android:id="@+id/btMul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
@@ -53,6 +61,7 @@
             />
 
         <Button
+            android:id="@+id/btDiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
